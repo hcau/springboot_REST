@@ -1,9 +1,7 @@
-package fr.caujolle.herve.restservices.controller;
+package fr.caujolle.herve.restservices.controllers;
 
-import fr.caujolle.herve.restservices.model.UserDetails;
+import fr.caujolle.herve.restservices.models.UserDetails;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController

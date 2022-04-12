@@ -1,4 +1,4 @@
-package fr.caujolle.herve.restservices.model;
+package fr.caujolle.herve.restservices.models;
 
 public class UserDetails {
     private String firstname;
