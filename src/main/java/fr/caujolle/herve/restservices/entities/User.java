@@ -1,13 +1,14 @@
 package fr.caujolle.herve.restservices.entities;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
+
 
 //@Entity(name="user")
 //@Entity
 //@Table(name="user", schema="usermanagement")
 //@Table(name="user")
-//Entity
-// and
 @Entity
 @Table(name = "user")
 public class User {
@@ -16,9 +17,11 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotEmpty(message = "Username is mandatory field, please provide username.")
     @Column(name = "USER_NAME", length = 50, nullable = false, unique = true)
     private String username;
 
+    @Size( min = 2, message = "FirstName should have at least 2 characters.")
     @Column(name = "FIRST_NAME", length = 50, nullable = false)
     private String firstname;
 
